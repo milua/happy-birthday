@@ -1,8 +1,10 @@
-@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
+@import 'styles/custom-theme';
 
 html {
   height: 100%;
 }
+
 body {
-  background: -webkit-gradient(linear, left top, left bottom, from(#e5e3c6), to(#fff)) fixed;
+  background: -webkit-gradient(linear, left top, left bottom, from(#363636), to(#4b4b4b)) fixed;
+  color: white;
 }
