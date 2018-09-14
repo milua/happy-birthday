@@ -1,3 +1,8 @@
-<div class="container">
-  <p class="line-1 anim-typewriter">Uhuhu...uhuhu...uhuhuhu...</p>
+<div class="container" (click)="nextDialog()">
+  <p class="line-1 anim-typewriter">{{firstLine}}</p>
+  <p class="line-1 anim-typewriter">line 2</p>
+  <p class="line-1 anim-typewriter">line 3</p>
+  <button mat-icon-button class="btn-position vert-move">
+    <mat-icon aria-label="Example icon-button with a heart icon">arrow_drop_down_circle</mat-icon>
+  </button>
 </div>

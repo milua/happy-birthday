@@ -1,16 +1,20 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-dialog',
   templateUrl: './dialog.component.html',
   styleUrls: ['./dialog.component.scss']
 })
-export class DialogComponent implements OnInit {
+export class DialogComponent {
+  public firstLine = '';
+  public secondLine = '';
+  public thirdLine = '';
 
   constructor() {
+    this.firstLine = 'Uhuhuhu.........uhuhuhu..........uhuhuhu......';
   }
 
-  ngOnInit() {
+  public nextDialog() {
+    console.log('nächste');
   }
-
 }

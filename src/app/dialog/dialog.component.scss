@@ -19,9 +19,11 @@
 .line-1 {
   white-space: nowrap;
   overflow: hidden;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
-/* Animation */
+// ---------------------------------------------
 .anim-typewriter {
   animation: typewriter 4s steps(44) 1s 1 normal both;
 }
@@ -34,4 +36,20 @@
     width: 85vw;
   }
 }
+
+// -----------------------------------------------
+.vert-move {
+  -webkit-animation: mover 1s infinite alternate;
+  animation: mover 1s infinite alternate;
+}
+
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
 
