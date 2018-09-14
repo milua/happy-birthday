@@ -1,8 +1,11 @@
-<div class="container css-typing" (click)="nextDialog()">
+<div class="container css-typing">
   <p>{{firstLine}}</p>
   <p>{{secondLine}}</p>
   <p>{{thirdLine}}</p>
-  <button mat-icon-button class="btn-position vert-move">
-    <mat-icon aria-label="Example icon-button with a heart icon">arrow_drop_down_circle</mat-icon>
+  <button *ngIf="this.controlService.state !== 0" mat-icon-button class="back-btn-pos vert-move" (click)="back()">
+    <mat-icon aria-label="Back button" class="rotate">arrow_drop_down_circle</mat-icon>
+  </button>
+  <button mat-icon-button class="forward-btn-pos vert-move" (click)="forward()">
+    <mat-icon aria-label="Forward button">arrow_drop_down_circle</mat-icon>
   </button>
 </div>

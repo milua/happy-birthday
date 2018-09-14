@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {EventEmitter, Injectable} from '@angular/core';
 
 @Injectable()
 export class ControlService {
@@ -6,12 +6,11 @@ export class ControlService {
 
   private _state: number;
 
-  public constructor() {
-    this._state = 0;
-  }
+  public onSceneChanged: EventEmitter<number>;
 
-  public get state() {
-    return this._state;
+  public constructor() {
+    this.onSceneChanged = new EventEmitter<number>();
+    this._state = 0;
   }
 
   public next() {
@@ -20,6 +19,7 @@ export class ControlService {
     } else {
       this._state += 1;
     }
+    this.onSceneChanged.emit(this._state);
   }
 
   public back() {
@@ -28,5 +28,7 @@ export class ControlService {
     } else {
       this._state -= 1;
     }
+    this.onSceneChanged.emit(this._state);
   }
+
 }

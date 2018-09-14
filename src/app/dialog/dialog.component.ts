@@ -12,13 +12,32 @@ export class DialogComponent {
   public secondLine = '';
   public thirdLine = '';
 
+  public state;
+
   constructor(private controlService: ControlService) {
-    this.firstLine = Dialog.sceneOne.get(this.controlService.state)[0];
-    this.secondLine = Dialog.sceneOne.get(this.controlService.state)[1];
-    this.thirdLine = Dialog.sceneOne.get(this.controlService.state)[2];
+    this.firstLine = Dialog.sceneOne.get(0)[0];
+    this.secondLine = Dialog.sceneOne.get(0)[1];
+    this.thirdLine = Dialog.sceneOne.get(0)[2];
+
+    this.controlService.onSceneChanged.subscribe(state => this.loadDialog(state));
   }
 
-  public nextDialog() {
+  public loadDialog(state: number) {
+    if (!Dialog.sceneOne.get(state)) {
+      return;
+    }
+    this.state = state;
+
+    this.firstLine = Dialog.sceneOne.get(state)[0];
+    this.secondLine = Dialog.sceneOne.get(state)[1];
+    this.thirdLine = Dialog.sceneOne.get(state)[2];
+  }
+
+  public forward() {
     this.controlService.next();
+  }
+
+  public back() {
+    this.controlService.back();
   }
 }

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {ImagePath} from './image-path';
 import {ControlService} from '../control/control.service';
 
@@ -7,22 +7,19 @@ import {ControlService} from '../control/control.service';
   templateUrl: './story.component.html',
   styleUrls: ['./story.component.scss']
 })
-export class StoryComponent implements OnInit {
+export class StoryComponent {
 
   private readonly PREFIX = './assets/';
   public imgPath = '';
 
-  private assetMap = new Map<number, string>();
 
   constructor(private controlService: ControlService) {
-    this.imgPath = this.PREFIX + ImagePath.paths.get(this.controlService.state);
-    console.log(ImagePath.paths.get(this.controlService.state));
+    this.imgPath = this.PREFIX + ImagePath.paths.get(0);
+
+    this.controlService.onSceneChanged.subscribe(state => this.loadScene(state));
   }
 
-  ngOnInit() {
-  }
-
-  private loadScene(index: number) {
-    this.imgPath = this.assetMap.get(index);
+  private loadScene(state: number) {
+    this.imgPath = this.PREFIX + ImagePath.paths.get(state);
   }
 }
