@@ -11,12 +11,15 @@ export class StoryComponent {
 
   private readonly PREFIX = './assets/';
   public imgPath = '';
-
+  public interactionActive = false;
 
   constructor(private controlService: ControlService) {
     this.imgPath = this.PREFIX + ImagePath.paths.get(0);
 
-    this.controlService.onSceneChanged.subscribe(state => this.loadScene(state));
+    this.controlService.onSceneChanged.subscribe(state => {
+      this.loadScene(state);
+      this.setInteractionState(state);
+    });
   }
 
   private loadScene(state: number) {
@@ -24,5 +27,15 @@ export class StoryComponent {
       return;
     }
     this.imgPath = this.PREFIX + ImagePath.paths.get(state);
+  }
+
+  private setInteractionState(state: number) {
+    switch (state) {
+      case 3:
+        this.interactionActive = true;
+        break;
+      default:
+        this.interactionActive = false;
+    }
   }
 }

@@ -8,6 +8,7 @@ import {HeaderComponent} from './header/header.component';
 import {InventoryComponent} from './inventory/inventory.component';
 import {DialogComponent} from './dialog/dialog.component';
 import {ControlService} from './control/control.service';
+import { InteractionModalComponent } from './interaction-modal/interaction-modal.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {ControlService} from './control/control.service';
     StoryComponent,
     HeaderComponent,
     InventoryComponent,
-    DialogComponent
+    DialogComponent,
+    InteractionModalComponent
   ],
   imports: [
     BrowserModule,

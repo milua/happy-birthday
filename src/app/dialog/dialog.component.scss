@@ -5,22 +5,21 @@
   border-width: 1px;
   border-color: white;
   z-index: 2;
-  position: relative;
   padding: 25px;
   margin: 10px;
 }
 
 .forward-btn-pos {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 15px;
+  right: 15px;
   z-index: 3;
 }
 
 .back-btn-pos {
   position: absolute;
-  bottom: 0;
-  right: 35px;
+  bottom: 15px;
+  right: 45px;
   z-index: 4;
 }
 
