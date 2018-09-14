@@ -12,7 +12,7 @@ export class DialogComponent {
   public secondLine = '';
   public thirdLine = '';
 
-  public state;
+  public state = 0;
 
   constructor(private controlService: ControlService) {
     this.firstLine = Dialog.sceneOne.get(0)[0];

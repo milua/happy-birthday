@@ -20,6 +20,9 @@ export class StoryComponent {
   }
 
   private loadScene(state: number) {
+    if (!ImagePath.paths.get(state)) {
+      return;
+    }
     this.imgPath = this.PREFIX + ImagePath.paths.get(state);
   }
 }

@@ -2,7 +2,7 @@
   <p>{{firstLine}}</p>
   <p>{{secondLine}}</p>
   <p>{{thirdLine}}</p>
-  <button *ngIf="this.controlService.state !== 0" mat-icon-button class="back-btn-pos vert-move" (click)="back()">
+  <button *ngIf="this.state !== 0" mat-icon-button class="back-btn-pos vert-move" (click)="back()">
     <mat-icon aria-label="Back button" class="rotate">arrow_drop_down_circle</mat-icon>
   </button>
   <button mat-icon-button class="forward-btn-pos vert-move" (click)="forward()">
