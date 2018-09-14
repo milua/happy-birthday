@@ -15,3 +15,23 @@
   bottom: 0;
   right: 0;
 }
+
+.line-1 {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Animation */
+.anim-typewriter {
+  animation: typewriter 4s steps(44) 1s 1 normal both;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 85vw;
+  }
+}
+
