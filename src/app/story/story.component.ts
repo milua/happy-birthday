@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {ImagePath} from './image-path';
+import {ControlService} from '../control/control.service';
 
 @Component({
   selector: 'app-story',
@@ -7,13 +9,14 @@ import {Component, OnInit} from '@angular/core';
 })
 export class StoryComponent implements OnInit {
 
+  private readonly PREFIX = './assets/';
   public imgPath = '';
 
   private assetMap = new Map<number, string>();
 
-  constructor() {
-    this.imgPath = './assets/00-guinea-pig.gif';
-    this.assetMap.set(0, './assets/00-guinea-pig.gif');
+  constructor(private controlService: ControlService) {
+    this.imgPath = this.PREFIX + ImagePath.paths.get(this.controlService.state);
+    console.log(ImagePath.paths.get(this.controlService.state));
   }
 
   ngOnInit() {

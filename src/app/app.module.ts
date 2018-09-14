@@ -7,6 +7,7 @@ import {StoryComponent} from './story/story.component';
 import {HeaderComponent} from './header/header.component';
 import {InventoryComponent} from './inventory/inventory.component';
 import {DialogComponent} from './dialog/dialog.component';
+import {ControlService} from './control/control.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import {DialogComponent} from './dialog/dialog.component';
     BrowserModule,
     NgMaterialModule
   ],
-  providers: [],
+  providers: [
+    ControlService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

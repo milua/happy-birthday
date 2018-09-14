@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {Dialog} from './dialog';
+import {ControlService} from '../control/control.service';
 
 @Component({
   selector: 'app-dialog',
@@ -11,12 +12,13 @@ export class DialogComponent {
   public secondLine = '';
   public thirdLine = '';
 
-  constructor() {
-    this.firstLine = Dialog.sceneOne.one[0];
-    this.secondLine = Dialog.sceneOne.one[1];
-    this.thirdLine = Dialog.sceneOne.one[2];
+  constructor(private controlService: ControlService) {
+    this.firstLine = Dialog.sceneOne.get(this.controlService.state)[0];
+    this.secondLine = Dialog.sceneOne.get(this.controlService.state)[1];
+    this.thirdLine = Dialog.sceneOne.get(this.controlService.state)[2];
   }
 
   public nextDialog() {
+    this.controlService.next();
   }
 }
