@@ -1,6 +1,6 @@
 .container {
   height: 15vh;
-  background-color: #171717;
+  background-color: rgba(0, 0, 0, 0.8);
   border-style: solid;
   border-width: 1px;
   border-color: white;
@@ -20,20 +20,129 @@
   white-space: nowrap;
   overflow: hidden;
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
-// ---------------------------------------------
-.anim-typewriter {
-  animation: typewriter 4s steps(44) 1s 1 normal both;
+// -----------------------------------------------
+.css-typing p {
+  font-family: "Courier";
+  font-size: 14px;
+  width: 85vw;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-animation: type 2s steps(40, end);
+  animation: type 2s steps(40, end);
 }
 
-@keyframes typewriter {
+.css-typing p:nth-child(2) {
+  white-space: nowrap;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-animation: type 2s steps(40, end);
+  animation: type2 2s steps(40, end);
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.css-typing p:nth-child(3) {
+  white-space: nowrap;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-animation: type 5s steps(40, end);
+  animation: type3 5s steps(40, end);
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes type {
   from {
     width: 0;
   }
+}
+
+@-webkit-keyframes type {
+  from {
+    width: 0;
+  }
+}
+
+span {
+  animation: blink 1s infinite;
+}
+
+@keyframes type2 {
+  0% {
+    width: 0;
+  }
+  from {
+    opacity: 0;
+  }
+  1% {
+    opacity: 1;
+  }
   to {
-    width: 85vw;
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes type2 {
+  0% {
+    width: 0;
+  }
+  from {
+    opacity: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes type3 {
+  0% {
+    width: 0;
+  }
+  from {
+    opacity: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes type3 {
+  0% {
+    width: 0;
+  }
+  from {
+    opacity: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
