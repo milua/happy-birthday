@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-story',
@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StoryComponent implements OnInit {
 
-  constructor() { }
+  public imgPath = '';
+
+  private assetMap = new Map<number, string>();
+
+  constructor() {
+    this.imgPath = './assets/00-guinea-pig.gif';
+    this.assetMap.set(0, './assets/00-guinea-pig.gif');
+  }
 
   ngOnInit() {
   }
 
+  private loadScene(index: number) {
+    this.imgPath = this.assetMap.get(index);
+  }
 }
