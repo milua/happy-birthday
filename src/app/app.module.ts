@@ -1,13 +1,12 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
 import {NgMaterialModule} from '../ng-material/ng-material.module';
-import { StoryComponent } from './story/story.component';
-import { HeaderComponent } from './header/header.component';
-import { InventoryComponent } from './inventory/inventory.component';
-import {FlexLayoutModule} from '@angular/flex-layout';
-import { DialogComponent } from './dialog/dialog.component';
+import {StoryComponent} from './story/story.component';
+import {HeaderComponent} from './header/header.component';
+import {InventoryComponent} from './inventory/inventory.component';
+import {DialogComponent} from './dialog/dialog.component';
 
 @NgModule({
   declarations: [
@@ -19,10 +18,10 @@ import { DialogComponent } from './dialog/dialog.component';
   ],
   imports: [
     BrowserModule,
-    NgMaterialModule,
-    FlexLayoutModule
+    NgMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
