@@ -1,5 +1,10 @@
 export class Dialog {
-  public static sceneDialogMap = new Map<number, string[]>([
-    [0, ['']]
-  ]);
+
+  public static sceneOne = {
+    'one': [
+      'Uhuhuhuh......',
+      '.....uhuhuh....',
+      '.........uhuhuhu...!!'
+    ]
+  };
 }

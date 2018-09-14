@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {Dialog} from './dialog';
 
 @Component({
   selector: 'app-dialog',
@@ -11,10 +12,11 @@ export class DialogComponent {
   public thirdLine = '';
 
   constructor() {
-    this.firstLine = 'Uhuhuhu.........uhuhuhu..........uhuhuhu......';
+    this.firstLine = Dialog.sceneOne.one[0];
+    this.secondLine = Dialog.sceneOne.one[1];
+    this.thirdLine = Dialog.sceneOne.one[2];
   }
 
   public nextDialog() {
-    console.log('nächste');
   }
 }
