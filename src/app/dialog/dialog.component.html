@@ -1,4 +1,4 @@
-<div class="container css-typing">
+<div *ngIf="firstLine.length !== 0 || secondLine.length !== 0 || thirdLine.length !== 0" class="container css-typing">
   <p>{{firstLine}}</p>
   <p>{{secondLine}}</p>
   <p>{{thirdLine}}</p>

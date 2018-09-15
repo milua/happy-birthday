@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {ControlService} from '../control/control.service';
 
 @Component({
   selector: 'app-interaction-modal',
@@ -6,7 +7,12 @@ import {Component} from '@angular/core';
   styleUrls: ['./interaction-modal.component.scss']
 })
 export class InteractionModalComponent {
+  public valueSelected = false;
 
-  constructor() {
+  constructor(private controlService: ControlService) {
+  }
+
+  public next() {
+    this.controlService.next();
   }
 }

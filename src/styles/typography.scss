@@ -1,7 +1,7 @@
 @import '~@angular/material/theming';
-$custom-typography: mat-typography-config(
-  $font-family: 'Titan One'
 
+$custom-typography: mat-typography-config(
+  $font-family: 'Courier'
 );
 
 @include angular-material-typography($custom-typography);

@@ -22,6 +22,10 @@ export class StoryComponent {
     });
   }
 
+  public next() {
+    this.controlService.next();
+  }
+
   private loadScene(state: number) {
     if (!ImagePath.paths.get(state)) {
       return;
