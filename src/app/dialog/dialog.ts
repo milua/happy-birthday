@@ -6,5 +6,7 @@ export class Dialog {
     [2, ['Uhh....', '...welchen Tag haben wir heute eigentlich...?', '']],
     [4, ['....', 'Zeit zum Aufstehen.', '']],
     [5, ['', '', '']],
+    [8, ['', 'AAAAAAAAAAAAAAAAAAAAAAHHHHH!!!!', '']],
+    [9, ['', 'WO IST MEINE NASE HIN?!', '']]
   ]);
 }

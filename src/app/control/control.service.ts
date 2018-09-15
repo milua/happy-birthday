@@ -19,6 +19,7 @@ export class ControlService {
     } else {
       this._state += 1;
     }
+    console.log(this._state);
     this.onSceneChanged.emit(this._state);
   }
 
@@ -28,6 +29,7 @@ export class ControlService {
     } else {
       this._state -= 1;
     }
+    console.log(this._state);
     this.onSceneChanged.emit(this._state);
   }
 

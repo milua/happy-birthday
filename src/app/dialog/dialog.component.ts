@@ -24,6 +24,10 @@ export class DialogComponent {
 
   public loadDialog(state: number) {
     if (!Dialog.sceneOne.get(state)) {
+      this.firstLine = '';
+      this.secondLine = '';
+      this.thirdLine = '';
+
       return;
     }
     this.state = state;
