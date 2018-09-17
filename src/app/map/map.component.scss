@@ -1,0 +1,35 @@
+.bathroom {
+  width: 27vh;
+  height: 17vh;
+  position: relative;
+  bottom: -128px;
+  right: -82px;
+  // background: blue;
+}
+
+.kitchen {
+  width: 31vh;
+  height: 16vh;
+  position: relative;
+  bottom: -383px;
+  left: -403px;
+  // background: green;
+}
+
+.room {
+  width: 31vh;
+  height: 22vh;
+  position: absolute;
+  top: -49px;
+  right: 42px;
+  // background: #9b6100;
+}
+
+.livingroom {
+  width: 52vh;
+  height: 37vh;
+  position: absolute;
+  top: -166px;
+  right: 353px;
+  // background: rosybrown;
+}

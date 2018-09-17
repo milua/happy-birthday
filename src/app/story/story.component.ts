@@ -9,6 +9,7 @@ import {ControlService} from '../control/control.service';
 })
 export class StoryComponent {
 
+  public state = 0;
   private readonly PREFIX = './assets/';
   public imgPath = '';
   public interactionActive = false;
@@ -17,6 +18,7 @@ export class StoryComponent {
     this.imgPath = this.PREFIX + ImagePath.paths.get(0);
 
     this.controlService.onSceneChanged.subscribe(state => {
+      this.state = state;
       this.loadScene(state);
       this.setInteractionState(state);
     });
@@ -24,6 +26,10 @@ export class StoryComponent {
 
   public next() {
     this.controlService.next();
+  }
+
+  public backToMap() {
+    this.controlService.goto(10);
   }
 
   private loadScene(state: number) {

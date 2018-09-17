@@ -19,7 +19,11 @@ export class ControlService {
     } else {
       this._state += 1;
     }
-    console.log(this._state);
+    this.onSceneChanged.emit(this._state);
+  }
+
+  public goto(state: number) {
+    this._state = state;
     this.onSceneChanged.emit(this._state);
   }
 

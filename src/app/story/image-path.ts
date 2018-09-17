@@ -7,6 +7,10 @@ export class ImagePath {
     [7, '07-bathroom.gif'],
     [8, '08-blackscreen.jpg'],
     [9, '09-piety.jpg'],
-    [10, '10-map.jpg']
+    [10, '10-map.jpg'],
+    [11, 'kitchen.jpg'],
+    [12, 'room.jpg'],
+    [13, 'bathroom.jpg'],
+    [14, 'livingroom.jpg'],
   ]);
 }

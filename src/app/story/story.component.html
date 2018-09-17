@@ -1,5 +1,21 @@
 <div class="container mat-elevation-z3">
+  <app-map class="map" *ngIf="state === 10"></app-map>
+  <button mat-raised-button class="map-button" *ngIf="state >= 11" (click)="backToMap()">
+    <mat-icon aria-label="Go to map button">local_library</mat-icon>
+  </button>
   <img class="scene" src={{imgPath}} (click)="next()"/>
   <app-dialog class="dialog"></app-dialog>
   <app-interaction-modal *ngIf="interactionActive"></app-interaction-modal>
+
+  <!-- Kitchen overlay -->
+
+
+  <!-- Living Room overlay -->
+
+
+  <!-- Bath overlay -->
+
+
+  <!-- Room overlay -->
 </div>
+
