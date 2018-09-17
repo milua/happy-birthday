@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {ImagePath} from './image-path';
 import {ControlService} from '../control/control.service';
+import {MatSnackBar} from '@angular/material';
 
 @Component({
   selector: 'app-story',
@@ -21,7 +22,7 @@ export class StoryComponent {
   public bathroomClueOne = false;
   public bathroomClueTwo = false;
 
-  constructor(private controlService: ControlService) {
+  constructor(private controlService: ControlService, public snackBar: MatSnackBar) {
     this.imgPath = this.PREFIX + ImagePath.paths.get(0);
 
     this.controlService.onSceneChanged.subscribe(state => {
@@ -59,13 +60,21 @@ export class StoryComponent {
     }
   }
 
-  activateClue(clue: boolean) {
+  public activateClue(clue: boolean) {
     if (clue === true) {
       return;
     } else {
       // TODO
       console.log('activated');
     }
+  }
+
+  public openSnackBar(message: string, action: string) {
+    this.snackBar.open(message, action, {
+      duration: 5000,
+      verticalPosition: 'top',
+      panelClass: ['snackbar-style']
+    });
   }
 
 }

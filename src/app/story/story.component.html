@@ -10,27 +10,27 @@
   <!-- Kitchen overlay -->
   <div *ngIf="state === 11">
     <button class="btn-size clue-kitchen-1" data-tooltip="!!!"
-            (click)="activateClue(kitchenClueOne); kitchenClueOne = true;"></button>
+            (click)="activateClue(kitchenClueOne); kitchenClueOne = true; openSnackBar('Da klebt etwas Nasenblut am Meser.', '');"></button>
     <button class="btn-size clue-kitchen-2" data-tooltip="!!!"
-            (click)="activateClue(kitchenClueTwo); kitchenClueTwo = true;"></button>
+            (click)="activateClue(kitchenClueTwo); kitchenClueTwo = true; openSnackBar('Jackpot! Hier ist die Nase entlang gesprungen!', '');"></button>
   </div>
   <!-- Living Room overlay -->
   <div *ngIf="state === 14">
     <button class="btn-size clue-living-1" data-tooltip="!!!"
-            (click)="activateClue(livingClueOne); livingClueOne = true;"></button>
+            (click)="activateClue(livingClueOne); livingClueOne = true; openSnackBar('Hmm....Blumen....mit...Nasenschnodder. Anscheinend ist die Nase gegen diese Blumen allergisch.', '');"></button>
     <button class="btn-size clue-living-2" data-tooltip="!!!"
-            (click)="activateClue(livingClueTwo); livingClueTwo = true;"></button>
+            (click)="activateClue(livingClueTwo); livingClueTwo = true; openSnackBar('Am Tischbein scheint eine Nase dran geknabbert zu haben...frag mich nicht wie das funktioniert.', '');"></button>
   </div>
   <!-- Bath overlay -->
   <div *ngIf="state === 13">
     <button class="btn-size clue-bath-1" data-tooltip="!!!"
-            (click)="activateClue(bathroomClueOne); bathroomClueOne = true;"></button>
+            (click)="activateClue(bathroomClueOne); bathroomClueOne = true; openSnackBar('Eine Spur aus Nasenhaaren.', '');"></button>
     <button class="btn-size clue-bath-2" data-tooltip="!!!"
-            (click)="activateClue(bathroomClueTwo); bathroomClueTwo = true;"></button>
+            (click)="activateClue(bathroomClueTwo); bathroomClueTwo = true; openSnackBar('Hmmm...der Geruch von Seife. Da hat sie (die Nase) auf jeden Fall ein Päuschen eingelegt.', '');"></button>
   </div>
   <!-- Room overlay -->
   <div *ngIf="state === 12">
-    <button class="btn-size" data-tooltip="Nur ne öde Pflanze"></button>
+    <button class="btn-size" style="top: 15vh; left: 4vh;" (click)="openSnackBar('Nur ne öde Pflanze', '');"></button>
   </div>
 </div>
 
