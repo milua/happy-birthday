@@ -8,8 +8,9 @@ import {HeaderComponent} from './header/header.component';
 import {InventoryComponent} from './inventory/inventory.component';
 import {DialogComponent} from './dialog/dialog.component';
 import {ControlService} from './control/control.service';
-import { InteractionModalComponent } from './interaction-modal/interaction-modal.component';
-import { MapComponent } from './map/map.component';
+import {InteractionModalComponent} from './interaction-modal/interaction-modal.component';
+import {MapComponent} from './map/map.component';
+import {MapService} from './map/map.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { MapComponent } from './map/map.component';
     NgMaterialModule
   ],
   providers: [
-    ControlService
+    ControlService,
+    MapService
   ],
   bootstrap: [AppComponent]
 })

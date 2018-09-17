@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {ControlService} from '../control/control.service';
+import {MapService} from './map.service';
 
 @Component({
   selector: 'app-map',
@@ -8,9 +9,12 @@ import {ControlService} from '../control/control.service';
 })
 export class MapComponent {
 
-  constructor(private controlService: ControlService) {
+  constructor(private controlService: ControlService, private mapService: MapService) {
   }
 
+  public get goalText(): string {
+    return this.mapService.goalText;
+  }
 
   public onKitchenSelected() {
     this.controlService.goto(11);
