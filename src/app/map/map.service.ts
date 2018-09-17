@@ -6,7 +6,6 @@ export class MapService {
   private postfix = 'xYUJ2E';
 
   public constructor() {
-    this.i = 0;
   }
 
   public loadCluePostfix(index: number) {

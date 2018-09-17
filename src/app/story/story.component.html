@@ -13,6 +13,15 @@
             (click)="activateClue(kitchenClueOne); kitchenClueOne = true; openSnackBar('Da klebt etwas Nasenblut am Meser.', '');"></button>
     <button class="btn-size clue-kitchen-2" data-tooltip="!!!"
             (click)="activateClue(kitchenClueTwo); kitchenClueTwo = true; openSnackBar('Jackpot! Hier ist die Nase entlang gesprungen!', '');"></button>
+
+    <button class="btn-size" style="top: 21vh; left: 43vh;"
+            (click)="openSnackBar('Ich kann leider nicht mit Spinnen reden', '');"></button>
+    <button class="btn-size" style="top: 18vh; right: 19vh;"
+            (click)="openSnackBar('Ich tue mal so, als hätte ich das nicht gesehen...', '');"></button>
+    <button class="btn-size" style="top: 16vh; left: 54vh;"
+            (click)="openSnackBar('Hmm....Isi! Ein Snack!', '');"></button>
+    <button class="btn-size" style="bottom: 15vh; left: 6vh;"
+            (click)="openSnackBar('Ein Flummi...nein...DER Flummi!', '');"></button>
   </div>
   <!-- Living Room overlay -->
   <div *ngIf="state === 14">
@@ -20,6 +29,16 @@
             (click)="activateClue(livingClueOne); livingClueOne = true; openSnackBar('Hmm....Blumen....mit...Nasenschnodder. Anscheinend ist die Nase gegen diese Blumen allergisch.', '');"></button>
     <button class="btn-size clue-living-2" data-tooltip="!!!"
             (click)="activateClue(livingClueTwo); livingClueTwo = true; openSnackBar('Am Tischbein scheint eine Nase dran geknabbert zu haben...frag mich nicht wie das funktioniert.', '');"></button>
+
+    <button class="btn-size" style="top: 24vh; left: 23vh;"
+            (click)="openSnackBar('Das sind nur Nasenbilder', '');"></button>
+    <button class="btn-size" style="top: 22vh; left: 35vh;;"
+            (click)="openSnackBar('Das bringt mir nichts', '');"></button>
+    <button class="btn-size" style="top: 22vh; right: 9vh;" (click)="openSnackBar('Hey Pinocchio!', '');"></button>
+    <button class="btn-size" style="top: 31vh; left: 32vh;"
+            (click)="openSnackBar('Seit wann haben wir so viele Nasenbilder..?', '');"></button>
+    <button class="btn-size" style="top: 30vh; right: 48vh;"
+            (click)="openSnackBar('Ein mysteriöser Fleck......hat aber nichts mit meiner Nase zu tun.', '');"></button>
   </div>
   <!-- Bath overlay -->
   <div *ngIf="state === 13">
@@ -27,10 +46,31 @@
             (click)="activateClue(bathroomClueOne); bathroomClueOne = true; openSnackBar('Eine Spur aus Nasenhaaren.', '');"></button>
     <button class="btn-size clue-bath-2" data-tooltip="!!!"
             (click)="activateClue(bathroomClueTwo); bathroomClueTwo = true; openSnackBar('Hmmm...der Geruch von Seife. Da hat sie (die Nase) auf jeden Fall ein Päuschen eingelegt.', '');"></button>
+
+    <button class="btn-size" style="bottom: 12vh; left: 16vh;"
+            (click)="openSnackBar('Ich hoffe, die Nase hat da kein Bad drin genommen...', '');"></button>
+    <button class="btn-size" style="bottom: 16vh; right: 22vh;" (click)="openSnackBar('Quak!', '');"></button>
+    <button class="btn-size" style="top: 10vh; right: 56vh;"
+            (click)="openSnackBar('Ein Shampoo-Schandfleck', '');"></button>
+    <button class="btn-size" style="bottom: 33vh; right: 32vh;"
+            (click)="openSnackBar('Wer wirft denn bitte ein Handtuch einfach in die Ecke?', '');"></button>
+    <button class="btn-size" style="bottom: 28vh; left: 50vh;"
+            (click)="openSnackBar('Fusselig...aber keine Spur von der Nase', '');"></button>
+    <button class="btn-size" style="top: 27vh; left: 20vh;"
+            (click)="openSnackBar('Den brauche ich gerade nicht.', '');"></button>
   </div>
   <!-- Room overlay -->
   <div *ngIf="state === 12">
     <button class="btn-size" style="top: 15vh; left: 4vh;" (click)="openSnackBar('Nur ne öde Pflanze', '');"></button>
+    <button class="btn-size" style="bottom: 33vh; left: 59vh;"
+            (click)="openSnackBar('In diesem Zimmer sehe ich nichts Auffälliges', '');"></button>
+    <button class="btn-size" style="top: 24vh; right: 34vh;" (click)="openSnackBar('Ein Kaktus...', '');"></button>
+    <button class="btn-size" style="top: 22vh; left: 55vh;"
+            (click)="openSnackBar('Wann wächst endlich Geld dran?', '');"></button>
+    <button class="btn-size" style="top: 31vh; left: 14vh;"
+            (click)="openSnackBar('Ich male nicht...das Glas gehört bestimmt Isi.', '');"></button>
+    <button class="btn-size" style="top: 57vh; right: 21vh;"
+            (click)="openSnackBar('Eine Ruhepause...Die Suche ist ganz schön anstrengend', '');"></button>
   </div>
 </div>
 
