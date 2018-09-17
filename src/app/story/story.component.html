@@ -8,14 +8,29 @@
   <app-interaction-modal *ngIf="interactionActive"></app-interaction-modal>
 
   <!-- Kitchen overlay -->
-
-
+  <div *ngIf="state === 11">
+    <button class="btn-size clue-kitchen-1" data-tooltip="!!!"
+            (click)="activateClue(kitchenClueOne); kitchenClueOne = true;"></button>
+    <button class="btn-size clue-kitchen-2" data-tooltip="!!!"
+            (click)="activateClue(kitchenClueTwo); kitchenClueTwo = true;"></button>
+  </div>
   <!-- Living Room overlay -->
-
-
+  <div *ngIf="state === 14">
+    <button class="btn-size clue-living-1" data-tooltip="!!!"
+            (click)="activateClue(livingClueOne); livingClueOne = true;"></button>
+    <button class="btn-size clue-living-2" data-tooltip="!!!"
+            (click)="activateClue(livingClueTwo); livingClueTwo = true;"></button>
+  </div>
   <!-- Bath overlay -->
-
-
+  <div *ngIf="state === 13">
+    <button class="btn-size clue-bath-1" data-tooltip="!!!"
+            (click)="activateClue(bathroomClueOne); bathroomClueOne = true;"></button>
+    <button class="btn-size clue-bath-2" data-tooltip="!!!"
+            (click)="activateClue(bathroomClueTwo); bathroomClueTwo = true;"></button>
+  </div>
   <!-- Room overlay -->
+  <div *ngIf="state === 12">
+    <button class="btn-size" data-tooltip="Nur ne öde Pflanze"></button>
+  </div>
 </div>
 

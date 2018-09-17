@@ -14,6 +14,13 @@ export class StoryComponent {
   public imgPath = '';
   public interactionActive = false;
 
+  public kitchenClueOne = false;
+  public kitchenClueTwo = false;
+  public livingClueOne = false;
+  public livingClueTwo = false;
+  public bathroomClueOne = false;
+  public bathroomClueTwo = false;
+
   constructor(private controlService: ControlService) {
     this.imgPath = this.PREFIX + ImagePath.paths.get(0);
 
@@ -25,6 +32,9 @@ export class StoryComponent {
   }
 
   public next() {
+    if (this.state >= 10) {
+      return;
+    }
     this.controlService.next();
   }
 
@@ -48,4 +58,14 @@ export class StoryComponent {
         this.interactionActive = false;
     }
   }
+
+  activateClue(clue: boolean) {
+    if (clue === true) {
+      return;
+    } else {
+      // TODO
+      console.log('activated');
+    }
+  }
+
 }
