@@ -6,13 +6,13 @@ export class MapService {
   private postfix = 'xYUJ2E';
 
   public constructor() {
+    this.i = 0;
   }
 
-  public loadCluePostfix() {
-    if (this.postfix.length === 0) {
+  public loadCluePostfix(index: number) {
+    if (index >= this.postfix.length) {
       return;
     }
-    this.goalText += this.postfix.charAt(0);
-    this.postfix.slice(1, this.postfix.length - 1);
+    this.goalText += this.postfix.charAt(index);
   }
 }

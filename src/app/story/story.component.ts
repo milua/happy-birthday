@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {ImagePath} from './image-path';
 import {ControlService} from '../control/control.service';
 import {MatSnackBar} from '@angular/material';
+import {MapService} from '../map/map.service';
 
 @Component({
   selector: 'app-story',
@@ -22,7 +23,9 @@ export class StoryComponent {
   public bathroomClueOne = false;
   public bathroomClueTwo = false;
 
-  constructor(private controlService: ControlService, public snackBar: MatSnackBar) {
+  private i = 0;
+
+  constructor(private controlService: ControlService, public snackBar: MatSnackBar, private mapService: MapService) {
     this.imgPath = this.PREFIX + ImagePath.paths.get(0);
 
     this.controlService.onSceneChanged.subscribe(state => {
@@ -64,8 +67,8 @@ export class StoryComponent {
     if (clue === true) {
       return;
     } else {
-      // TODO
-      console.log('activated');
+      this.mapService.loadCluePostfix(this.i);
+      this.i++;
     }
   }
 
